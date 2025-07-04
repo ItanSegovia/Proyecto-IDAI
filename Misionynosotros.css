@@ -1,0 +1,46 @@
+/* Colores base */
+body {
+    background-color: black;
+    color: yellow;
+}
+
+/* Cuadro centrado para secciones */
+.cuadro-info {
+    max-width: 700px;
+    margin: 50px auto;
+    background-color: #1a1a1a; /* gris oscuro */
+    border: 2px solid yellow;
+    padding: 30px;
+    border-radius: 12px;
+    text-align: center;
+    box-shadow: 0 0 20px rgba(255, 255, 0, 0.2); /* sombra amarilla suave */
+}
+
+/* Títulos */
+.cuadro-info h2 {
+    color: yellow;
+    margin-bottom: 15px;
+    border-bottom: 1px solid yellow;
+    padding-bottom: 5px;
+}
+
+/* Enlaces del nav */
+nav ul {
+    list-style: none;
+    display: flex;
+    justify-content: center;
+    gap: 30px;
+    padding: 0;
+    margin: 0;
+}
+
+nav ul li a {
+    color: yellow;
+    font-weight: bold;
+    text-decoration: none;
+    font-size: 16px;
+}
+
+nav ul li a:hover {
+    text-decoration: underline;
+}
