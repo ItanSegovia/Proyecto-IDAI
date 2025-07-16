@@ -1,0 +1,180 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Bebidas Cargadas y Saladas</title>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" />
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      margin: 0;
+      padding: 0;
+      background: #000000;
+      color: #ffffff;
+    }    
+    
+    header {
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    padding: 10px 0px;
+    background-color: yellow;
+    color: black;
+    padding: 20px;
+    text-align: center;
+    }
+    
+    li{
+      display: inline-block;
+      padding: 0px 20px;
+      list-style: none;
+    }
+
+  .logo{
+      width: 200px;
+      cursor: pointer;
+    }
+
+    h1, h2 {
+      text-align: center;
+      margin-top: 30px;
+      color: #e0c000;
+    }
+
+    .section {
+      margin-top: 40px;
+    }
+
+    .drink-list {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(180px, 1fr));
+      gap: 20px;
+      margin-top: 20px;
+    }
+
+    .drink-card {
+      background: rgb(0, 0, 0);
+      border: 1px solid #e0c000;
+      padding: 15px;
+      border-radius: 10px;
+      text-align: center;
+      box-shadow: 0 2px 4px #0000001a;
+      transition: transform 0.2s;
+      cursor: pointer;
+      transition: transform 0.2s, box-shadow 0.2s;
+    }
+
+    .drink-card:hover {
+      transform: scale(1.03);
+      box-shadow: 0 0 10px #e0c000;
+    }
+
+    .drink-card i {
+      font-size: 32px;
+      color: #e0c000;
+      margin-bottom: 10px;
+    }
+
+    .drink-name {
+      font-weight: bold;
+      color: #e0c000;
+    }
+    .img {
+      padding: 20px;
+      text-align: center;
+    }
+
+
+
+  </style>
+</head>
+<body>
+
+
+   <header>
+        <img src="archivos/lacruda.png" alt="La Cruda Logo" class="logo">
+    </header>
+  
+    <h1>Menú Bebidas Cargadas y Saladas</h1>
+
+  <div class="section">
+    <h2>Bebidas Cargadas</h2>
+    <div class="drink-list">
+
+      <div class="drink-card" onclick="agregarAlCarrito('Bomba')"><i class="fa-solid fa-bomb"></i>
+      <div class="drink-name">Bomba</div><div class="drink-descripcón">Cerveza con limón, salsas y escarchado.</div></div>
+
+      <div class="drink-card" onclick="agregarAlCarrito('Huracán')"><i class="fa-solid fa-hurricane"></i><div class="drink-name">Huracán</div><div class="drink-descripcón">Cerveza con limón, salsas y escarchado.</div></div>
+
+      <div class="drink-card" onclick="agregarAlCarrito('7 Mares')"><i class="fa-solid fa-water"></i><div class="drink-name">7 Mares</div><div class="drink-descripcón">Cerveza con limón, salsas y escarchado.</div></div>
+      
+      <div class="drink-card" onclick="agregarAlCarrito('Pancho Villa')"><i class="fa-solid fa-hat-cowboy"></i><div class="drink-name">Pancho Villa</div><div class="drink-descripcón">Cerveza con limón, salsas y escarchado.</div></div>
+      
+      <div class="drink-card" onclick="agregarAlCarrito('Fantasma')"><i class="fa-solid fa-ghost"></i><div class="drink-name">Fantasma</div><div class="drink-descripcón">Cerveza con limón, salsas y escarchado.</div></div>
+    
+    </div>
+  </div>
+
+  <div class="section">
+    <h2>Bebidas Saladas (32)</h2>
+    <div class="drink-list">
+      
+      <div class="drink-card" onclick="agregarAlCarrito('Michelada')">
+      <i class="fa-solid fa-beer-mug-empty"></i><div class="drink-name">Michelada</div>
+      <div class="drink-descripcón">Cerveza con limón, salsas y escarchado.</div>
+      </div>
+
+      <div class="drink-card" onclick="agregarAlCarrito('Chamochela')"><i class="fa-solid fa-beer-mug-empty"></i><div class="drink-name">Chamochela</div> <div class="drink-descripcón">Cerveza con limón, salsas y escarchado.</div></div>
+
+      <div class="drink-card" onclick="agregarAlCarrito('Chelada')"><i class="fa-solid fa-beer-mug-empty"></i></i><div class="drink-name">Chelada</div> <div class="drink-descripcón">Cerveza con limón, salsas y escarchado.</div></div>
+
+      <div class="drink-card" onclick="agregarAlCarrito('Bull')"><i class="fa-solid fa-beer-mug-empty"></i><div class="drink-name">Bull</div> <div class="drink-descripcón">Cerveza con limón, salsas y escarchado.</div></div>
+
+      <div class="drink-card" onclick="agregarAlCarrito('Sangre de Diablo')"><i class="fa-solid fa-beer-mug-empty"></i><div class="drink-name">Sangre de Diablo</div> <div class="drink-descripcón">Cerveza con limón, salsas y escarchado.</div></div>
+
+      <div class="drink-card" onclick="agregarAlCarrito('Clamato')"><i class="fa-solid fa-beer-mug-empty"></i><div class="drink-name">Clamato</div><div class="drink-descripcón">Cerveza con limón, salsas y escarchado.</div></div>
+
+      <div class="drink-card" onclick="agregarAlCarrito('Cerveza española')"><i class="fa-solid fa-beer-mug-empty"></i><div class="drink-name">Cerveza española</div> <div class="drink-descripcón">Cerveza con limón, salsas y escarchado.</div></div>
+
+      <div class="drink-card" onclick="agregarAlCarrito('BeerBuster')"><i class="fa-solid fa-beer-mug-empty"></i><div class="drink-name">BeerBuster</div> <div class="drink-descripcón">Cerveza con limón, salsas y escarchado.</div></div>
+
+      <div class="drink-card" onclick="agregarAlCarrito('Patada de Mula')"><i class="fa-solid fa-beer-mug-empty"></i><div class="drink-name">Patada de Mula</div> <div class="drink-descripcón">Cerveza con limón, salsas y escarchado.</div></div>
+
+      <div class="drink-card" onclick="agregarAlCarrito('Tequilazo')"><i class="fa-solid fa-beer-mug-empty"></i><div class="drink-name">Tequilazo</div> <div class="drink-descripcón">Cerveza con limón, salsas y escarchado.</div></div>
+
+    </div>
+  </div>
+
+
+<div id="carrito">
+  <strong>🛒 Carrito de Compras:</strong>
+  <ul id="lista-carrito"></ul>
+</div>
+
+<div class="img"><img src="archivos/lacrudota.jpg" alt="" class="logo"></div>
+  
+
+
+<script>
+  const carrito = [];
+
+  function agregarAlCarrito(nombre) {
+    carrito.push(nombre);
+    actualizarCarrito();
+  }
+
+  function actualizarCarrito() {
+    const lista = document.getElementById('lista-carrito');
+    lista.innerHTML = '';
+    carrito.forEach((item) => {
+      const li = document.createElement('li');
+      li.textContent = item;
+      lista.appendChild(li);
+    });
+  }
+</script>
+
+
+</body>
+</html>
