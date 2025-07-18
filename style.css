@@ -366,3 +366,33 @@ footer a:hover {
         padding: 15px;
     }
 }
+
+/* NUEVO: Sección lado a lado */
+.seccion-doble {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 30px;
+  padding: 60px 20px;
+  background-color: black;
+  color: #f2f2f2;
+}
+
+.cuadro-info {
+  background-color: black;
+  padding: 30px;
+  border-radius: 15px;
+  box-shadow: 0 0 15px rgba(224, 192, 0, 0.2);
+  border: 1px solid #e0c000;
+  max-width: 500px;
+  flex: 1 1 300px;
+}
+
+.cuadro-info h2 {
+  color: #e0c000;
+  margin-bottom: 15px;
+}
+
+.cuadro-info p {
+  line-height: 1.6;
+}
