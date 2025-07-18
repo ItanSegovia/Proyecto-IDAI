@@ -1,0 +1,135 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Contacto - La Cruda</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+    <link rel="stylesheet" href="style.css">
+    <style>
+        /* Estilos específicos para la página de contacto (puedes mover esto a style.css si prefieres) */
+        .seccion-contacto {
+            padding: 40px 20px;
+            background-color: #f9f9f9;
+            text-align: center;
+        }
+
+        .seccion-contacto h2 {
+            margin-bottom: 30px;
+            color: #333;
+        }
+
+        .info-contacto-grid {
+            display: grid;
+            grid-template-columns: 1fr 1fr; /* Dos columnas */
+            gap: 30px;
+            max-width: 900px;
+            margin: 0 auto;
+            text-align: left;
+        }
+
+        .item-contacto {
+            background-color: #fff;
+            padding: 25px;
+            border-radius: 8px;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+        }
+
+        .item-contacto h3 {
+            color: #555;
+            margin-bottom: 15px;
+            font-size: 1.5em;
+        }
+
+        .item-contacto p {
+            margin-bottom: 10px;
+            color: #666;
+            line-height: 1.6;
+        }
+
+        .item-contacto i {
+            margin-right: 10px;
+            color: #d9534f; /* Color para los íconos */
+        }
+
+        .redes-sociales a {
+            font-size: 2em;
+            margin: 0 10px;
+            color: #d9534f;
+            transition: color 0.3s ease;
+        }
+
+        .redes-sociales a:hover {
+            color: #c9302c;
+        }
+
+        .mapa-contenedor {
+            width: 100%;
+            height: 450px; /* Altura del mapa */
+            margin-top: 30px;
+            border-radius: 8px;
+            overflow: hidden; /* Asegura que el mapa se vea redondeado si se aplica border-radius */
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+        }
+
+        .mapa-contenedor iframe {
+            width: 100%;
+            height: 100%;
+            border: 0;
+        }
+
+        /* Responsive adjustments */
+        @media (max-width: 768px) {
+            .info-contacto-grid {
+                grid-template-columns: 1fr; /* Una columna en pantallas pequeñas */
+            }
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <div class="cabecera-contenedor">
+            <a href="index.html"> <img src="archivos/lacruda.png" alt="La Cruda Logo" class="logo-empresa">
+            </a>
+            <nav>
+                <ul>
+                    <li><a href="index.html#inicio">Inicio</a></li>
+                    <li><a href="index.html#nosotros">Nosotros</a></li>
+                    <li><a href="index.html#mision">Misión</a></li>
+                    <li><a href="Menu-2.html" id="menu">Menú</a></li>
+                    <li><a href="contacto.html">Contacto</a></li>
+                </ul>
+            </nav>
+        </div>
+    </header>
+
+    <main>
+        <section id="contacto" class="seccion-contenedor seccion-contacto">
+            <h2>Contáctanos</h2>
+            <div class="info-contacto-grid">
+                <div class="item-contacto">
+                    <h3>Información</h3>
+                    <p><i class="fas fa-map-marker-alt"></i> Dirección: Lago Tana 404, Urbivilla Colonial, 64102 Monterrey, N.L.</p>
+                    <p><i class="fas fa-phone-alt"></i> Teléfono: +52 55 1234 5678</p>
+                    <p><i class="fas fa-envelope"></i> Email: info@lacruda.mx</p>
+                    <p><i class="fas fa-clock"></i> Horario: Lunes a Domingo: 10:00 - 22:00, Sábados y Domingos: 12:00 - 06:00</p>
+                </div>
+                <div class="item-contacto">
+                    <h3>Síguenos en Redes</h3>
+                    <div class="redes-sociales">
+                        <a href="https://www.facebook.com/LaCrudaa/?locale=es_LA" target="_blank" title="Facebook"><i class="fa-brands fa-facebook"></i></a>
+                        <a href="https://www.instagram.com/lacruda.oficial?igsh=MTM4dmhxZTZwMmRlcA%3D%3D" target="_blank" title="Instagram"><i class="fab fa-instagram"></i></a>
+                    </div>
+                </div>
+            </div>
+            <div class="mapa-contenedor">
+                <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3596.904229672049!2d-100.3548074246824!3d25.7513360064956!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x86629737e3d1b11b%3A0x6d11b11f6c7c2b3c!2sLago%20Tana%20404%2C%20Urbivilla%20Colonial%2C%2064102%20Monterrey%2C%20N.L.!5e0!3m2!1ses-419!2smx!4v1700000000000!5m2!1ses-419!2smx" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+            </div>
+        </section>
+    </main>
+
+    <footer>
+        <p>La Cruda</p>
+    </footer>
+</body>
+</html>
