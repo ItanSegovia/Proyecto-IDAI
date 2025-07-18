@@ -287,6 +287,42 @@ footer a:hover {
     color: yellow;
 }
 
+    .bebidas-section {
+      display: flex;
+      justify-content: space-around;
+      text-align: center;
+      gap: 20px;
+    }
+
+    .bebida {
+      position: relative;
+      width: 300px;
+      overflow: hidden;
+      border-radius: 15px;
+      box-shadow: 0 4px 10px rgba(0,0,0,0.2);
+      transition: transform 0.3s;
+    }
+
+    .bebida img {
+      width: 100%;
+      height: auto;
+      display: block;
+    }
+
+    .bebida-title {
+      position: absolute;
+      bottom: 0;
+      width: 100%;
+      background: rgba(0, 0, 0, 0.6);
+      color: #fff;
+      font-size: 24px;
+      padding: 10px;
+    }
+
+    .bebida:hover {
+      transform: scale(1.05);
+    }
+
 @media (max-width: 768px) {
     header {
         flex-direction: column;
