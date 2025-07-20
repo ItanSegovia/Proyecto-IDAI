@@ -147,6 +147,50 @@
       z-index: 999;
       text-decoration: none;
     }
+
+    /* MEDIA QUERIES para mejorar responsividad en pantallas pequeñas */
+    @media (max-width: 600px) {
+      .logo {
+        width: 150px;
+      }
+
+      h1 {
+        font-size: 20px;
+      }
+
+      .slide-name {
+        font-size: 16px;
+      }
+
+      .drink-name {
+        font-size: 14px;
+      }
+
+      .drink-description {
+        font-size: 12px;
+      }
+
+      #carrito {
+        top: auto;
+        bottom: 90px;
+        right: 10px;
+        width: 90%;
+        max-width: none;
+        font-size: 13px;
+      }
+
+      .whatsapp-float {
+        padding: 10px;
+        font-size: 20px;
+        bottom: 20px;
+        right: 10px;
+      }
+
+      .contenido {
+        padding: 20px 10px;
+        gap: 20px;
+      }
+    }
   </style>
 </head>
 <body>
@@ -175,72 +219,70 @@
       </div>
     </div>
 
-    
- <!-- bebidas -->
-    <div class="drink-list">
-      <div class="drink-card" onclick="agregarAlCarrito('Fruty Colada')">
-        <i class="fa-solid fa-ice-cream"></i>
-        <div class="drink-name">Fruty Colada</div>
-        <div class="drink-description">Piña colada, Amaretto, Jugo de uva, ron o vodka. (frappé)</div>
-      </div>
-      <div class="drink-card" onclick="agregarAlCarrito('Ilusión')">
-        <i class="fa-solid fa-ice-cream"></i>
-        <div class="drink-name">Ilusión</div>
-        <div class="drink-description">Leche evaporada, Licor de durazno, Vodka, Jarabe.</div>
-      </div>
-      <div class="drink-card" onclick="agregarAlCarrito('Mamada')">
-        <i class="fa-solid fa-ice-cream"></i>
-        <div class="drink-name">Mamada</div>
-        <div class="drink-description">Ron malibu, Crema de coca, Jugo de uva.</div>
-      </div>
-      <div class="drink-card" onclick="agregarAlCarrito('Maya Sex')">
-        <i class="fa-solid fa-cookie-bite"></i>
-        <div class="drink-name">Maya Sex</div>
-        <div class="drink-description">Ron, Vodka, Mildori, Licor de cereza, Granadina, Sprite, Limón.</div>
-      </div>
-      <div class="drink-card" onclick="agregarAlCarrito('Medias de Seda')">
-        <i class="fa-solid fa-blender"></i>
-        <div class="drink-name">Medias de Seda</div>
-        <div class="drink-description">Leche evaporada, Crema de coco, Vodka, Granadina, Licor de café. (frappé)</div>
-      </div>
-      <div class="drink-card" onclick="agregarAlCarrito('Jaladas de Niña')">
-        <i class="fa-solid fa-mug-hot"></i>
-        <div class="drink-name">Jaladas de Niña</div>
-        <div class="drink-description">Vodka, Baileys, Jugo de Fresa, Crema de Coco. (frappé)</div>
-      </div>
-      <div class="drink-card" onclick="agregarAlCarrito('Orgasmo')">
-        <i class="fa-solid fa-blender-phone"></i>
-        <div class="drink-name">Orgasmo</div>
-        <div class="drink-description">Vodka, Ron, Licor de Durazno, Crema de Coco, Granadina. (frappé)</div>
-      </div>
-      <div class="drink-card" onclick="agregarAlCarrito('Orgasmo de Chocolate')">
-        <i class="fa-solid fa-blender-phone"></i>
-        <div class="drink-name">Orgasmo de Chocolate</div>
-        <div class="drink-description">Vodka, Ron, Jugo de Piña, Crema de Coco, Hershey's. (frappé)</div>
-      </div>
-      <div class="drink-card" onclick="agregarAlCarrito('Batida Tropical')">
-        <i class="fa-solid fa-blender-phone"></i>
-        <div class="drink-name">Batida Tropical</div>
-        <div class="drink-description">Vodka, Licor de Café, Baileys, Jugo de Piña, Crema de Coco.</div>
-      </div>
-      <div class="drink-card" onclick="agregarAlCarrito('B-52')">
-        <i class="fa-solid fa-blender-phone"></i>
-        <div class="drink-name">B-52</div>
-        <div class="drink-description">Jugo de Piña, Crema de Coco, Baileys, Vodka. (frappé)</div>
-      </div>
-      <div class="drink-card" onclick="agregarAlCarrito('Cielito Lindo')">
-        <i class="fa-solid fa-blender-phone"></i>
-        <div class="drink-name">Cielito Lindo</div>
-        <div class="drink-description">Piña Colada, Curazao Blue. (frappé)</div>
-      </div>
-      <div class="drink-card" onclick="agregarAlCarrito('Beso de Ángel')">
-        <i class="fa-solid fa-blender-phone"></i>
-        <div class="drink-name">Beso de Ángel</div>
-        <div class="drink-description">Ron, Leche Evaporada, Crema de Coco, Jarabe, Canela. (frappé)</div>
-      </div>
-    </div>
+    <!-- bebidas -->
+<div class="drink-list">
+  <div class="drink-card" onclick="agregarAlCarrito('Fruty Colada')">
+    <i class="fa-solid fa-ice-cream"></i>
+    <div class="drink-name">Fruty Colada</div>
+    <div class="drink-description">Piña colada, Amaretto, Jugo de uva, ron o vodka. (frappé)</div>
+  </div>
+  <div class="drink-card" onclick="agregarAlCarrito('Ilusión')">
+    <i class="fa-solid fa-ice-cream"></i>
+    <div class="drink-name">Ilusión</div>
+    <div class="drink-description">Leche evaporada, Licor de durazno, Vodka, Jarabe.</div>
+  </div>
+  <div class="drink-card" onclick="agregarAlCarrito('Mamada')">
+    <i class="fa-solid fa-ice-cream"></i>
+    <div class="drink-name">Mamada</div>
+    <div class="drink-description">Ron malibu, Crema de coca, Jugo de uva.</div>
+  </div>
+  <div class="drink-card" onclick="agregarAlCarrito('Maya Sex')">
+    <i class="fa-solid fa-cookie-bite"></i>
+    <div class="drink-name">Maya Sex</div>
+    <div class="drink-description">Ron, Vodka, Mildori, Licor de cereza, Granadina, Sprite, Limón.</div>
+  </div>
+  <div class="drink-card" onclick="agregarAlCarrito('Medias de Seda')">
+    <i class="fa-solid fa-blender"></i>
+    <div class="drink-name">Medias de Seda</div>
+    <div class="drink-description">Leche evaporada, Crema de coco, Vodka, Granadina, Licor de café. (frappé)</div>
+  </div>
+  <div class="drink-card" onclick="agregarAlCarrito('Jaladas de Niña')">
+    <i class="fa-solid fa-mug-hot"></i>
+    <div class="drink-name">Jaladas de Niña</div>
+    <div class="drink-description">Vodka, Baileys, Jugo de Fresa, Crema de Coco. (frappé)</div>
+  </div>
+  <div class="drink-card" onclick="agregarAlCarrito('Orgasmo')">
+    <i class="fa-solid fa-blender-phone"></i>
+    <div class="drink-name">Orgasmo</div>
+    <div class="drink-description">Vodka, Ron, Licor de Durazno, Crema de Coco, Granadina. (frappé)</div>
+  </div>
+  <div class="drink-card" onclick="agregarAlCarrito('Orgasmo de Chocolate')">
+    <i class="fa-solid fa-blender-phone"></i>
+    <div class="drink-name">Orgasmo de Chocolate</div>
+    <div class="drink-description">Vodka, Ron, Jugo de Piña, Crema de Coco, Hershey's. (frappé)</div>
+  </div>
+  <div class="drink-card" onclick="agregarAlCarrito('Batida Tropical')">
+    <i class="fa-solid fa-blender-phone"></i>
+    <div class="drink-name">Batida Tropical</div>
+    <div class="drink-description">Vodka, Licor de Café, Baileys, Jugo de Piña, Crema de Coco.</div>
+  </div>
+  <div class="drink-card" onclick="agregarAlCarrito('B-52')">
+    <i class="fa-solid fa-blender-phone"></i>
+    <div class="drink-name">B-52</div>
+    <div class="drink-description">Jugo de Piña, Crema de Coco, Baileys, Vodka. (frappé)</div>
+  </div>
+  <div class="drink-card" onclick="agregarAlCarrito('Cielito Lindo')">
+    <i class="fa-solid fa-blender-phone"></i>
+    <div class="drink-name">Cielito Lindo</div>
+    <div class="drink-description">Piña Colada, Curazao Blue. (frappé)</div>
+  </div>
+  <div class="drink-card" onclick="agregarAlCarrito('Beso de Ángel')">
+    <i class="fa-solid fa-blender-phone"></i>
+    <div class="drink-name">Beso de Ángel</div>
+    <div class="drink-description">Ron, Leche Evaporada, Crema de Coco, Jarabe, Canela. (frappé)</div>
+  </div>
+</div>
 
-  
 
   </div>
 
