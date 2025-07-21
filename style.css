@@ -287,6 +287,42 @@ footer a:hover {
     color: yellow;
 }
 
+    .bebidas-section {
+      display: flex;
+      justify-content: space-around;
+      text-align: center;
+      gap: 20px;
+    }
+
+    .bebida {
+      position: relative;
+      width: 300px;
+      overflow: hidden;
+      border-radius: 15px;
+      box-shadow: 0 4px 10px rgba(0,0,0,0.2);
+      transition: transform 0.3s;
+    }
+
+    .bebida img {
+      width: 100%;
+      height: auto;
+      display: block;
+    }
+
+    .bebida-title {
+      position: absolute;
+      bottom: 0;
+      width: 100%;
+      background: rgba(0, 0, 0, 0.6);
+      color: #fff;
+      font-size: 24px;
+      padding: 10px;
+    }
+
+    .bebida:hover {
+      transform: scale(1.05);
+    }
+
 @media (max-width: 768px) {
     header {
         flex-direction: column;
@@ -365,34 +401,4 @@ footer a:hover {
     .cuadro-info {
         padding: 15px;
     }
-}
-
-/* NUEVO: Sección lado a lado */
-.seccion-doble {
-  display: flex;
-  flex-wrap: wrap;
-  justify-content: center;
-  gap: 30px;
-  padding: 60px 20px;
-  background-color: black;
-  color: #f2f2f2;
-}
-
-.cuadro-info {
-  background-color: black;
-  padding: 30px;
-  border-radius: 15px;
-  box-shadow: 0 0 15px rgba(224, 192, 0, 0.2);
-  border: 1px solid #e0c000;
-  max-width: 500px;
-  flex: 1 1 300px;
-}
-
-.cuadro-info h2 {
-  color: #e0c000;
-  margin-bottom: 15px;
-}
-
-.cuadro-info p {
-  line-height: 1.6;
 }

@@ -1,0 +1,336 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Menú Bebidas Dulces</title>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" />
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      margin: 0;
+      padding: 0;
+      background: #000000;
+      color: #fff;
+    }
+
+    header {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      background-color: yellow;
+      color: black;
+      padding: 20px;
+    }
+
+    .logo {
+      width: 200px;
+      cursor: pointer;
+    }
+
+    h1, h2 {
+      text-align: center;
+      margin-top: 30px;
+      color: #e0c000;
+    }
+
+    .contenido {
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: center;
+      gap: 40px;
+      padding: 30px;
+    }
+
+    .carrusel {
+      flex: 1;
+      min-width: 300px;
+      max-width: 400px;
+      display: flex;
+      overflow: hidden;
+      position: relative;
+      scroll-snap-type: x mandatory;
+      gap: 20px;
+      padding: 10px;
+    }
+
+    .slide {
+      flex: 0 0 auto;
+      width: 300px;
+      border-radius: 15px;
+      overflow: hidden;
+      position: relative;
+      scroll-snap-align: center;
+      box-shadow: 0 4px 10px rgba(0,0,0,0.5);
+    }
+
+    .slide img {
+      width: 100%;
+      display: block;
+    }
+
+    .slide-name {
+      position: absolute;
+      bottom: 0;
+      width: 100%;
+      background: rgba(0, 0, 0, 0.6);
+      text-align: center;
+      padding: 10px;
+      font-size: 20px;
+      color: #e0c000;
+    }
+
+    .drink-list {
+      flex: 1;
+      min-width: 300px;
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(180px, 1fr));
+      gap: 20px;
+    }
+
+    .drink-card {
+      background: rgb(0, 0, 0);
+      border: 1px solid #e0c000;
+      padding: 15px;
+      border-radius: 10px;
+      text-align: center;
+      box-shadow: 0 2px 4px rgba(0,0,0,0.2);
+      transition: transform 0.2s, box-shadow 0.2s;
+      cursor: pointer;
+    }
+
+    .drink-card:hover {
+      transform: scale(1.05);
+      box-shadow: 0 0 10px #e0c000;
+    }
+
+    .drink-card i {
+      font-size: 32px;
+      color: #e0c000;
+      margin-bottom: 10px;
+    }
+
+    .drink-name {
+      font-weight: bold;
+      font-size: 16px;
+    }
+
+    .drink-description {
+      font-size: 14px;
+      color: #ccc;
+      margin-top: 5px;
+    }
+
+    #carrito {
+      position: fixed;
+      top: 20px;
+      right: 20px;
+      background-color: #1a1a1a;
+      border: 1px solid #e0c000;
+      padding: 15px;
+      border-radius: 10px;
+      max-width: 300px;
+      color: white;
+      font-size: 14px;
+      z-index: 999;
+    }
+
+    .whatsapp-float {
+      position: fixed;
+      bottom: 20px;
+      right: 20px;
+      background: #25D366;
+      color: white;
+      padding: 15px;
+      border-radius: 50%;
+      font-size: 24px;
+      z-index: 999;
+      text-decoration: none;
+    }
+
+    /* MEDIA QUERIES para mejorar responsividad en pantallas pequeñas */
+@media (max-width: 600px) {
+  .logo {
+    width: 150px;
+  }
+
+  h1 {
+    font-size: 20px;
+  }
+
+  .slide-name {
+    font-size: 16px;
+  }
+
+  .drink-name {
+    font-size: 14px;
+  }
+
+  .drink-description {
+    font-size: 12px;
+  }
+
+  #carrito {
+    top: auto;
+    bottom: 80px;
+    left: 5%;
+    right: 5%;
+    width: 90%;
+    max-height: 150px;
+    overflow-y: auto;
+    font-size: 13px;
+    background-color: rgba(26, 26, 26, 0.95);
+    box-shadow: 0 0 10px #e0c000;
+  }
+
+  .whatsapp-float {
+    bottom: 20px;
+    right: 10px;
+    padding: 10px;
+    font-size: 20px;
+  }
+
+  .contenido {
+    padding: 20px 10px;
+    gap: 20px;
+  }
+}
+
+  </style>
+</head>
+<body>
+
+  <header>
+    <img src="archivos/lacruda.png" alt="La Cruda Logo" class="logo">
+  </header>
+
+  <h1>Menú de Bebidas Dulces</h1>
+
+  <div class="contenido">
+
+    <!-- Carrusel -->
+    <div class="carrusel" id="carrusel">
+      <div class="slide">
+        <img src="archivos/Carrusel-dulce.jpg" alt="Jaladas de Niña">
+        <div class="slide-name">Jaladas de Niña</div>
+      </div>
+      <div class="slide">
+        <img src="archivos/Carrusel-dulce2.jpg" alt=".">
+        <div class="slide-name">.</div>
+      </div>
+      <div class="slide">
+        <img src="archivos/dulce.jpg" alt=".">
+        <div class="slide-name">.</div>
+      </div>
+    </div>
+
+    <!-- bebidas -->
+<div class="drink-list">
+  <div class="drink-card" onclick="agregarAlCarrito('Fruty Colada')">
+    <i class="fa-solid fa-ice-cream"></i>
+    <div class="drink-name">Fruty Colada</div>
+    <div class="drink-description">Piña colada, Amaretto, Jugo de uva, ron o vodka. (frappé)</div>
+  </div>
+  <div class="drink-card" onclick="agregarAlCarrito('Ilusión')">
+    <i class="fa-solid fa-ice-cream"></i>
+    <div class="drink-name">Ilusión</div>
+    <div class="drink-description">Leche evaporada, Licor de durazno, Vodka, Jarabe.</div>
+  </div>
+  <div class="drink-card" onclick="agregarAlCarrito('Mamada')">
+    <i class="fa-solid fa-ice-cream"></i>
+    <div class="drink-name">Mamada</div>
+    <div class="drink-description">Ron malibu, Crema de coca, Jugo de uva.</div>
+  </div>
+  <div class="drink-card" onclick="agregarAlCarrito('Maya Sex')">
+    <i class="fa-solid fa-cookie-bite"></i>
+    <div class="drink-name">Maya Sex</div>
+    <div class="drink-description">Ron, Vodka, Mildori, Licor de cereza, Granadina, Sprite, Limón.</div>
+  </div>
+  <div class="drink-card" onclick="agregarAlCarrito('Medias de Seda')">
+    <i class="fa-solid fa-blender"></i>
+    <div class="drink-name">Medias de Seda</div>
+    <div class="drink-description">Leche evaporada, Crema de coco, Vodka, Granadina, Licor de café. (frappé)</div>
+  </div>
+  <div class="drink-card" onclick="agregarAlCarrito('Jaladas de Niña')">
+    <i class="fa-solid fa-mug-hot"></i>
+    <div class="drink-name">Jaladas de Niña</div>
+    <div class="drink-description">Vodka, Baileys, Jugo de Fresa, Crema de Coco. (frappé)</div>
+  </div>
+  <div class="drink-card" onclick="agregarAlCarrito('Orgasmo')">
+    <i class="fa-solid fa-blender-phone"></i>
+    <div class="drink-name">Orgasmo</div>
+    <div class="drink-description">Vodka, Ron, Licor de Durazno, Crema de Coco, Granadina. (frappé)</div>
+  </div>
+  <div class="drink-card" onclick="agregarAlCarrito('Orgasmo de Chocolate')">
+    <i class="fa-solid fa-blender-phone"></i>
+    <div class="drink-name">Orgasmo de Chocolate</div>
+    <div class="drink-description">Vodka, Ron, Jugo de Piña, Crema de Coco, Hershey's. (frappé)</div>
+  </div>
+  <div class="drink-card" onclick="agregarAlCarrito('Batida Tropical')">
+    <i class="fa-solid fa-blender-phone"></i>
+    <div class="drink-name">Batida Tropical</div>
+    <div class="drink-description">Vodka, Licor de Café, Baileys, Jugo de Piña, Crema de Coco.</div>
+  </div>
+  <div class="drink-card" onclick="agregarAlCarrito('B-52')">
+    <i class="fa-solid fa-blender-phone"></i>
+    <div class="drink-name">B-52</div>
+    <div class="drink-description">Jugo de Piña, Crema de Coco, Baileys, Vodka. (frappé)</div>
+  </div>
+  <div class="drink-card" onclick="agregarAlCarrito('Cielito Lindo')">
+    <i class="fa-solid fa-blender-phone"></i>
+    <div class="drink-name">Cielito Lindo</div>
+    <div class="drink-description">Piña Colada, Curazao Blue. (frappé)</div>
+  </div>
+  <div class="drink-card" onclick="agregarAlCarrito('Beso de Ángel')">
+    <i class="fa-solid fa-blender-phone"></i>
+    <div class="drink-name">Beso de Ángel</div>
+    <div class="drink-description">Ron, Leche Evaporada, Crema de Coco, Jarabe, Canela. (frappé)</div>
+  </div>
+</div>
+
+
+  </div>
+
+  <div id="carrito">
+    <strong>🛒 Carrito de Compras:</strong>
+    <ul id="lista-carrito"></ul>
+  </div>
+
+  <a href="https://wa.me/528116819909" class="whatsapp-float" target="_blank">
+    <i class="fab fa-whatsapp"></i>
+  </a>
+
+  <script>
+    const carrito = [];
+
+    function agregarAlCarrito(nombre) {
+      carrito.push(nombre);
+      actualizarCarrito();
+    }
+
+    function actualizarCarrito() {
+      const lista = document.getElementById('lista-carrito');
+      lista.innerHTML = '';
+      carrito.forEach((item) => {
+        const li = document.createElement('li');
+        li.textContent = item;
+        lista.appendChild(li);
+      });
+    }
+
+    // movimiento del carrusel
+    const carrusel = document.getElementById('carrusel');
+    const slides = carrusel.querySelectorAll('.slide');
+    let index = 0;
+
+    setInterval(() => {
+      index = (index + 1) % slides.length;
+      carrusel.scrollTo({
+        left: index * (slides[0].offsetWidth + 20),
+        behavior: 'smooth'
+      });
+    }, 5000);
+  </script>
+
+</body>
+</html>
