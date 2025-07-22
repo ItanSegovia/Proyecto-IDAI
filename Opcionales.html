@@ -1,0 +1,348 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Opcionales</title>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" />
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      margin: 0;
+      padding: 0;
+      background: #000000;
+      color: #fff;
+    }
+
+    header {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      background-color: yellow;
+      color: black;
+      padding: 20px;
+    }
+
+    .logo {
+      width: 200px;
+      cursor: pointer;
+    }
+
+    h1, h2 {
+      text-align: center;
+      margin-top: 30px;
+      color: #e0c000;
+    }
+
+    .contenido {
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: center;
+      gap: 40px;
+      padding: 30px;
+    }
+
+    .carrusel {
+      flex: 1;
+      min-width: 300px;
+      max-width: 400px;
+      display: flex;
+      overflow: hidden;
+      position: relative;
+      scroll-snap-type: x mandatory;
+      gap: 20px;
+      padding: 10px;
+    }
+
+    .slide {
+      flex: 0 0 auto;
+      width: 300px;
+      border-radius: 15px;
+      overflow: hidden;
+      position: relative;
+      scroll-snap-align: center;
+      box-shadow: 0 4px 10px rgba(0,0,0,0.5);
+    }
+
+    .slide img {
+      width: 100%;
+      display: block;
+    }
+
+    .slide-name {
+      position: absolute;
+      bottom: 0;
+      width: 100%;
+      background: rgba(0, 0, 0, 0.6);
+      text-align: center;
+      padding: 10px;
+      font-size: 20px;
+      color: #e0c000;
+    }
+
+    .drink-list {
+      flex: 1;
+      min-width: 300px;
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(180px, 1fr));
+      gap: 20px;
+    }
+
+    .drink-card {
+      background: rgb(0, 0, 0);
+      border: 1px solid #e0c000;
+      padding: 15px;
+      border-radius: 10px;
+      text-align: center;
+      box-shadow: 0 2px 4px rgba(0,0,0,0.2);
+      transition: transform 0.2s, box-shadow 0.2s;
+      cursor: pointer;
+    }
+
+    .drink-card:hover {
+      transform: scale(1.05);
+      box-shadow: 0 0 10px #e0c000;
+    }
+
+    .drink-card i {
+      font-size: 32px;
+      color: #e0c000;
+      margin-bottom: 10px;
+    }
+
+    .drink-name {
+      font-weight: bold;
+      font-size: 16px;
+    }
+
+    .drink-description {
+      font-size: 14px;
+      color: #ccc;
+      margin-top: 5px;
+    }
+
+    #carrito {
+      position: fixed;
+      top: 20px;
+      right: 20px;
+      background-color: #1a1a1a;
+      border: 1px solid #e0c000;
+      padding: 15px;
+      border-radius: 10px;
+      max-width: 300px;
+      color: white;
+      font-size: 14px;
+      z-index: 999;
+    }
+
+    .whatsapp-float {
+      position: fixed;
+      bottom: 20px;
+      right: 20px;
+      background: #25D366;
+      color: white;
+      padding: 15px;
+      border-radius: 50%;
+      font-size: 24px;
+      z-index: 999;
+      text-decoration: none;
+    }
+
+    @media (max-width: 600px) {
+      .logo {
+        width: 150px;
+      }
+
+      h1 {
+        font-size: 20px;
+      }
+
+      .slide-name {
+        font-size: 16px;
+      }
+
+      .drink-name {
+        font-size: 14px;
+      }
+
+      .drink-description {
+        font-size: 12px;
+      }
+
+      #carrito {
+        top: auto;
+        bottom: 80px;
+        left: 5%;
+        right: 5%;
+        width: 90%;
+        max-height: 150px;
+        overflow-y: auto;
+        font-size: 13px;
+        background-color: rgba(26, 26, 26, 0.95);
+        box-shadow: 0 0 10px #e0c000;
+      }
+
+      .whatsapp-float {
+        bottom: 20px;
+        right: 10px;
+        padding: 10px;
+        font-size: 20px;
+      }
+
+      .contenido {
+        padding: 20px 10px;
+        gap: 20px;
+      }
+    }
+  </style>
+</head>
+<body>
+
+  <header>  
+    <a href="index.html">
+    <img src="archivos/lacruda.png" alt="La Cruda Logo" class="logo">           
+    </a>
+  </header>
+
+  <h1>Opcionales</h1>
+  <h2>PA' VARIARLE</h2>
+
+  <div class="contenido">
+
+    <div class="carrusel" id="carrusel">
+      <div class="slide">
+        <img src="archivos/imagen-extasis.jpg" alt="Extasis">
+        <div class="slide-name">Extasis</div>
+      </div>
+      <div class="slide">
+        <img src="archivos/imagen-bluemoon.jpg" alt="Blue Moon">
+        <div class="slide-name">Blue Moon</div>
+      </div>
+      <div class="slide">
+        <img src="archivos/imagen-mojito.jpg" alt="Mojito">
+        <div class="slide-name">Mojito</div>
+      </div>
+    </div>
+
+    <div class="drink-list">
+      <div class="drink-card" onclick="agregarAlCarrito('Extasis')">
+        <i class="fa-solid fa-glass-martini-alt"></i>
+        <div class="drink-name">Extasis</div>
+        <div class="drink-description">Ron, Limón, Sal, Sprite</div>
+      </div>
+      <div class="drink-card" onclick="agregarAlCarrito('Blue Moon')">
+        <i class="fa-solid fa-moon"></i>
+        <div class="drink-name">Blue Moon</div>
+        <div class="drink-description">Vodka, Ron, Ginebra, Limón, Jarabe, Curazao Blue, Agua Mineral o Toronja</div>
+      </div>
+      <div class="drink-card" onclick="agregarAlCarrito('Tequila Sunrise')">
+        <i class="fa-solid fa-sun"></i>
+        <div class="drink-name">Tequila Sunrise</div>
+        <div class="drink-description">Tequila, Granadina, Jugo de Naranja</div>
+      </div>
+      <div class="drink-card" onclick="agregarAlCarrito('Mojito')">
+        <i class="fa-solid fa-lemon"></i>
+        <div class="drink-name">Mojito</div>
+        <div class="drink-description">Hojas de Hierbabuena, Limón, Ron, Agua Mineral, Azúcar Blanca</div>
+      </div>
+      <div class="drink-card" onclick="agregarAlCarrito('Mojito Coco')">
+        <i class="fa-solid fa-coconut"></i>
+        <div class="drink-name">Mojito Coco</div>
+        <div class="drink-description">Limón, Crema de Coco, Ron, Licor de Menta, Hojas de Menta</div>
+      </div>
+      <div class="drink-card" onclick="agregarAlcarrito('Perla Negra')">
+        <i class="fa-solid fa-gem"></i>
+        <div class="drink-name">Perla Negra</div>
+        <div class="drink-description">Boost, Jägermeister (Licor de Hierbas), Sprite</div>
+      </div>
+      <div class="drink-card" onclick="agregarAlCarrito('Hawai 5-0')">
+        <i class="fa-solid fa-umbrella-beach"></i>
+        <div class="drink-name">Hawai 5-0</div>
+        <div class="drink-description">Vodka, Malibu, Curazao Agua Mineral</div>
+      </div>
+      <div class="drink-card" onclick="agregarAlCarrito('Sex on the Beach')">
+        <i class="fa-solid fa-cocktail"></i>
+        <div class="drink-name">Sex on the Beach</div>
+        <div class="drink-description">Vodka, Licor de Durazno, de Naranja, Granadina</div>
+      </div>
+      <div class="drink-card" onclick="agregarAlCarrito('Malibu')">
+        <i class="fa-solid fa-palm-tree"></i>
+        <div class="drink-name">Malibu</div>
+        <div class="drink-description">Malibu, Jugo de Piña</div>
+      </div>
+      <div class="drink-card" onclick="agregarAlCarrito('Mojito Cubano')">
+        <i class="fa-solid fa-cubes"></i>
+        <div class="drink-name">Mojito Cubano</div>
+        <div class="drink-description">Ron Añejo, Limón, Azúcar Morena, Hojas de Menta, Seven Up o Sprite</div>
+      </div>
+      <div class="drink-card" onclick="agregarAlCarrito('Demonio Azul')">
+        <i class="fa-solid fa-mask"></i>
+        <div class="drink-name">Demonio Azul</div>
+        <div class="drink-description">Tequila, Vodka, Ron, Curazao Blue, Limón, Agua Mineral o Toronja</div>
+      </div>
+      <div class="drink-card" onclick="agregarAlCarrito('Yaqui Chan')">
+        <i class="fa-solid fa-dragon"></i>
+        <div class="drink-name">Yaqui Chan</div>
+        <div class="drink-description">Vodka, Ron, Tequila, Boost, Sprite</div>
+      </div>
+      <div class="drink-card" onclick="agregarAlCarrito('Yolita')">
+        <i class="fa-solid fa-pepper-hot"></i>
+        <div class="drink-name">Yolita</div>
+        <div class="drink-description">Tequila, Limón, Sal, Jugo de Manzana, Jugo de Naranja, Jugo de Piña, Tajín</div>
+      </div>
+      <div class="drink-card" onclick="agregarAlCarrito('Alfonso XIII')">
+        <i class="fa-solid fa-crown"></i>
+        <div class="drink-name">Alfonso XIII</div>
+        <div class="drink-description">Ron, Licor de Café, Leche Evaporada, Crema de Coco, (frappé)</div>
+      </div>
+      <div class="drink-card" onclick="agregarAlCarrito('Eclipse')">
+        <i class="fa-solid fa-cloud-moon"></i>
+        <div class="drink-name">Eclipse</div>
+        <div class="drink-description">Ron, Vodka, Licor de Melón, Jugo de Piña</div>
+      </div>
+    </div>
+  </div>
+
+  <div id="carrito">
+    <strong>🛒 Carrito de Compras:</strong>
+    <ul id="lista-carrito"></ul>
+  </div>
+
+  <a href="https://wa.me/528116819909" class="whatsapp-float" target="_blank">
+    <i class="fab fa-whatsapp"></i>
+  </a>
+
+  <script>
+    const carrito = [];
+
+    function agregarAlCarrito(nombre) {
+      carrito.push(nombre);
+      actualizarCarrito();
+    }
+
+    function actualizarCarrito() {
+      const lista = document.getElementById('lista-carrito');
+      lista.innerHTML = '';
+      carrito.forEach((item) => {
+        const li = document.createElement('li');
+        li.textContent = item;
+        lista.appendChild(li);
+      });
+    }
+
+    // movimiento del carrusel
+    const carrusel = document.getElementById('carrusel');
+    const slides = carrusel.querySelectorAll('.slide');
+    let index = 0;
+
+    setInterval(() => {
+      index = (index + 1) % slides.length;
+      carrusel.scrollTo({
+        left: index * (slides[0].offsetWidth + 20),
+        behavior: 'smooth'
+      });
+    }, 5000);
+  </script>
+
+</body>
+</html>
