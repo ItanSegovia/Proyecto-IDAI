@@ -284,6 +284,19 @@ footer {
       transform: scale(1.05);
     }
 
+    .seccion-doble {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 40px;
+    padding: 60px 20px;
+}
+
+.seccion-doble .cuadro-info {
+    flex: 1 1 350px; 
+    max-width: 500px;
+}
+
 @media (max-width: 768px) {
     header {
         flex-direction: column;
