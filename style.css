@@ -1,5 +1,3 @@
-
-
 body {
     background-color: black;
     color: yellow;
@@ -202,90 +200,53 @@ header {
 }
 
 .seccion-contacto {
-    background-color: yellow;
-    color: black;
+  background-color: #1c1c1c;
+  padding: 60px 20px;
 }
 
 .info-contacto-grid {
-    display: flex;
-    flex-wrap: wrap;
-    justify-content: center;
-    gap: 40px;
-    margin-top: 50px;
-    font-size: 1.1em;
-    max-width: 900px;
-    margin-left: auto;
-    margin-right: auto;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-around;
+  margin-top: 30px;
 }
 
 .item-contacto {
-    flex: 1;
-    min-width: 280px;
-    text-align: left;
-    background-color: #fff;
-    padding: 25px;
-    border-radius: 8px;
-    box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+  flex: 1 1 300px;
+  margin: 15px;
+  text-align: left;
 }
 
 .item-contacto h3 {
-    font-size: 2em;
-    margin-bottom: 25px;
-    color: black;
-    border-bottom: 2px solid black;
-    padding-bottom: 10px;
-    display: inline-block;
+  margin-bottom: 15px;
+  color: gray;
 }
 
-.item-contacto p {
-    margin-bottom: 15px;
-    display: flex;
-    align-items: center;
-    gap: 10px;
-    color: #333;
-}
 .item-contacto p i {
-    color: black;
-    font-size: 1.3em;
-}
-
-.redes-sociales {
-    margin-top: 30px;
-    display: flex;
-    justify-content: center;
-    gap: 25px;
+  margin-right: 8px;
+  color: gray;
 }
 
 .redes-sociales a {
-    color: black;
-    font-size: 2.5em;
-    text-decoration: none;
-    transition: color 0.3s ease, transform 0.2s ease;
+  margin: 0 10px;
+  font-size: 24px;
+  color: gray;
+  transition: color 0.3s;
 }
 
 .redes-sociales a:hover {
-    color: #444;
-    transform: scale(1.1);
+  color: red;
 }
 
 footer {
-    background-color: #0a0a0a;
-    color: #777;
-    text-align: center;
-    padding: 30px 20px;
-    font-size: 0.9em;
+  background-color: black;
+  padding: 20px 0;
+  text-align: center;
+  border-top: 2px solid gray;
+  font-size: 14px;
+  color: #ccc;
 }
 
-footer a {
-    color: #777;
-    text-decoration: none;
-    margin: 0 10px;
-    transition: color 0.3s ease;
-}
-
-footer a:hover {
-    color: yellow;
-}
 
     .bebidas-section {
       display: flex;
@@ -401,4 +362,18 @@ footer a:hover {
     .cuadro-info {
         padding: 15px;
     }
+}
+
+ @media (max-width: 600px) {
+  .seccion-contacto {
+    padding: 40px 10px;
+  }
+
+  .item-contacto {
+    padding: 15px;
+  }
+
+  .redes-sociales {
+    justify-content: center;
+  }
 }
